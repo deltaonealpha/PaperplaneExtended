@@ -21,8 +21,8 @@ async def notes_active(svd):
     message = "`There are no saved notes in this chat`"
     notes = get_notes(svd.chat_id)
     for note in notes:
-        if message == "`There are no saved notes in this chat`":
-            message = "Notes saved in this chat:\n"
+        if message == "`ProBotOne has no saved notes in this chat`":
+            message = "ProBotOne saved notes in this chat:\n"
             message += "`#{}`\n".format(note.keyword)
         else:
             message += "`#{}`\n".format(note.keyword)
@@ -39,10 +39,10 @@ async def remove_notes(clr):
         return
     notename = clr.pattern_match.group(1)
     if rm_note(clr.chat_id, notename) is False:
-        return await clr.edit("`Couldn't find note:` **{}**".format(notename))
+        return await clr.edit("`Sir, I Couldn't find note:` **{}**".format(notename))
     else:
         return await clr.edit(
-            "`Successfully deleted note:` **{}**".format(notename))
+            "`Successfully deleted note, Sir:` **{}**".format(notename))
 
 
 @register(outgoing=True, pattern=r"^\.save (\w*)")
