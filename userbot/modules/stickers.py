@@ -22,22 +22,23 @@ PACK_FULL = "Whoa! That's probably enough stickers for one pack, give it a break
 A pack can't have more than 120 stickers at the moment."
 
 KANGING_STR = [
-    "Using Witchery to kang this sticker...",
-    "Plagiarising hehe...",
-    "Inviting this sticker over to my pack...",
-    "Kanging this sticker...",
-    "Hey that's a nice sticker!\
-    \nMind if I kang?!..",
-    "hehe me stel ur stikér\
+    "Using Witchery to kang this sticker, nubboi...",
+    "Plagiarising your gorl hehe...",
+    "Inviting this sticker over to my saxy pacc...",
+    "Kanging this rarated sticker...",
+    "Hey that's a noice sticker! Or, is it? (0;-;0)\
+    \nMiNd iF I kAnG?!..",
+    "hEhE mE sTeL uR sTisSkér\
     \nhehe.",
-    "Ay look over there (☉｡☉)!→\
+    "Ay look over there (☉｡☉)!→ (not at my sweet ass)\
     \nWhile I kang this...",
     "Roses are red \
     \nviolets are blue, \
     \nkanging this sticker \
-    \nso my pacc looks cool",
-    "Imprisoning this sticker...",
-    "Mr.Steal Your Sticker is stealing this sticker... ",
+    \nso my pacc looks kewl \
+    \(tho is depends on the wAvElEnGTh actually ;)",
+    "Imprisoning this bastardly noisey stiscccer...",
+    "Mr.Stel Your Sticker is steLing tHIs stisscker... ",
 ]
 
 
@@ -81,10 +82,10 @@ async def kang(args):
             is_anim = True
             photo = 1
         else:
-            await args.edit("`Unsupported File!`")
+            await args.edit("`Sur, unsupported File!`")
             return
     else:
-        await args.edit("`I can't kang that...`")
+        await args.edit("`Sire, here to serve you but I can't kang that, Sire...`")
         return
 
     if photo:
@@ -246,7 +247,7 @@ async def kang(args):
                 await bot.send_read_acknowledge(conv.chat_id)
 
         await args.edit(f"`Sticker kanged successfully!`\
-            \nPack can be found [here](t.me/addstickers/{packname})",
+            \nHeHe pacc can be found [here](t.me/addstickers/{packname})",
                         parse_mode='md')
 
 
@@ -291,11 +292,11 @@ async def get_pack_info(event):
         await event.edit(
             "`Fetching details of the sticker pack, please wait..`")
     except BaseException:
-        await event.edit("`This is not a sticker. Reply to a sticker.`")
+        await event.edit("`This is not a stissckarr. Reply to a sticker.`")
         return
 
     if not isinstance(stickerset_attr, DocumentAttributeSticker):
-        await event.edit("`This is not a sticker. Reply to a sticker.`")
+        await event.edit("`This is not a stissckarr. Reply to a sticker.`")
         return
 
     get_stickerset = await bot(
