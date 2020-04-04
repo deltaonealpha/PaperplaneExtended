@@ -19,7 +19,7 @@ async def help(event):
         else:
             await event.edit("Please specify a valid module name.")
     else:
-        await event.edit("Please specify which module do you want help for !!\
+        await event.edit("Welcome to deta's ProBotOne Support page. Please specify which module do you want help for !!\
             \nUsage: .help <module name>")
         string = ""
         for i in CMD_HELP:
