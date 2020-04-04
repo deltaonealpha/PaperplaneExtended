@@ -17,10 +17,11 @@ from userbot.events import register
 
 # ========================= CONSTANTS ============================
 UNAPPROVED_MSG = (
-    "`Hello! This is an automated message.\n\n`"
-    "`I haven't approved you to PM yet.`"
-    "`Please wait for me to look in, I mostly approve PMs.\n\n`"
-    "`Until then, please don't spam my PM, you'll get blocked and reported!`")
+    "`Hello! This is an automated message from delta's ProBotOne.\n\n`"
+    "`delta haven't approved you to PM yet.`"
+    "`Please wait while I send your profile to him for approval..\n\n`"
+    "`Until then, please don't spam this PM, you'll get auto-blocked and reported!`"
+    "`Running scipt from servers.delta.com/delforce/xcontact/pmperm/init.py?`")
 # =================================================================
 
 
@@ -69,7 +70,7 @@ async def permitpm(event):
 
                 if COUNT_PM[event.chat_id] > 4:
                     await event.respond(
-                        "`You were spamming my PM, which I didn't like.`\n"
+                        "`You were spamming delta's PM, which I didn't like.`\n"
                         "`You have been BLOCKED and reported as SPAM, until further notice.`"
                     )
 
@@ -225,7 +226,7 @@ async def disapprovepm(disapprvpm):
         await disapprvpm.client.send_message(
             BOTLOG_CHATID,
             f"[{name0}](tg://user?id={disapprvpm.chat_id})"
-            " was disapproved to PM you.",
+            " was disapproved to PM you, Sire.",
         )
 
 
@@ -238,12 +239,12 @@ async def blockpm(block):
         aname = replied_user.id
         name0 = str(replied_user.first_name)
         await block.client(BlockRequest(replied_user.id))
-        await block.edit("`You've been blocked!`")
+        await block.edit("`You've been auto-blocked!`")
         uid = replied_user.id
     else:
         await block.client(BlockRequest(block.chat_id))
         aname = await block.client.get_entity(block.chat_id)
-        await block.edit("`You've been blocked!`")
+        await block.edit("`You've been auto-blocked!`")
         name0 = str(aname.first_name)
         uid = block.chat_id
 
