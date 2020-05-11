@@ -52,7 +52,7 @@ def register(**args):
                 return
 
             if groups_only and not check.is_group:
-                await check.respond("`I don't think this is a group.`")
+                await check.respond("`I don't think this is a group, master.`")
                 return
 
             try:
@@ -76,7 +76,7 @@ def register(**args):
                 if not disable_errors:
                     date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 
-                    text = "**USERBOT ERROR REPORT**\n"
+                    text = "**DERUTA HANDORA BUG-ERROR REPORT FILE**\n"
                     text += "Nothing is logged except the fact of error and date\n"
 
                     ftext = "========== DISCLAIMER =========="
@@ -116,8 +116,8 @@ def register(**args):
                     file.close()
 
                     if LOGSPAMMER:
-                        await check.respond("`Sorry, my userbot has crashed.\
-                        \nThe error logs are stored in the userbot's log chat.`"
+                        await check.respond("`OOpS seems like DerutaHandora has crashed.\
+                        \nThe crash logs have been sent to the log channel. Rebooting sys....`"
                                             )
 
                     await check.client.send_file(send_to,
